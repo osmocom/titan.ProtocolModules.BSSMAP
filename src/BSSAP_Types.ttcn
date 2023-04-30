@@ -2483,7 +2483,10 @@ type record PDU_BSSMAP_VGCS_VBSAssignmentRequest
   BSSMAP_IE_EncryptionInformation	encryptionInformation optional,
   BSSMAP_IE_VSTK_RAND           vSTK_RAND optional,
   BSSMAP_IE_VSTK                vSTK optional,
-  BSSMAP_IE_CellIdentifierListSegment   cellIdentifierListSegment optional
+  BSSMAP_IE_CellIdentifierListSegment   cellIdentifierListSegment optional,
+  BSSMAP_IE_AoIP_TransportLayerAddress	aoIPTransportLayer optional,
+  BSSMAP_IE_CallIdentifier		callIdentifier optional,
+  BSSMAP_IE_SpeechCodecList		codecList optional
 } with { variant "PRESENCE (messageType = '07'O)" }
 
 
@@ -2495,7 +2498,10 @@ type record PDU_BSSMAP_VGCS_VBSAssignmentResult
   BSSMAP_IE_CellIdentifier		cellIdentifier,
   BSSMAP_IE_ChosenChannel		chosenChannel optional,
   BSSMAP_IE_CircuitIdentityCode		circuitIdentityCode optional,
-  BSSMAP_IE_CircuitPool			circuitPool optional
+  BSSMAP_IE_CircuitPool			circuitPool optional,
+  BSSMAP_IE_AoIP_TransportLayerAddress	aoIPTransportLayer optional,
+  BSSMAP_IE_SpeechCodec			speechCodec optional,
+  BSSMAP_IE_CallIdentifier		callIdentifier optional
 } with { variant "PRESENCE (messageType = '1C'O)" }
 
 
@@ -2505,7 +2511,8 @@ type record PDU_BSSMAP_VGCS_VBSAssignmentFailure
   OCT1					messageType, // H'1D
   BSSMAP_IE_Cause			cause,
   BSSMAP_IE_CircuitPool			circuitPool optional,
-  BSSMAP_IE_CircuitPoolList		circuitPoolList optional
+  BSSMAP_IE_CircuitPoolList		circuitPoolList optional,
+  BSSMAP_IE_SpeechCodecList		codecList optional
 } with { variant "PRESENCE (messageType = '1D'O)" }
 
 
