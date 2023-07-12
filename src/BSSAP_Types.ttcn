@@ -2612,12 +2612,12 @@ type record PDU_BSSMAP_UplinkReleaseCommand
 // UPLINK SEIZED COMMAND- 48.008 subclause 3.2.1.63
 type record PDU_BSSMAP_UplinkSeizedCommand
 {
-  OCT1					messageType, // H'4E
+  OCT1					messageType, // H'4D
   BSSMAP_IE_Cause			cause,
   BSSMAP_IE_TalkerPriority  talkerPriority optional,
   BSSMAP_IE_EmergencySetIndication  emergencySetIndication optional,
   BSSMAP_IE_TalkerIdentity  talkerIdentity optional
-} with { variant "PRESENCE (messageType = '4E'O)" }
+} with { variant "PRESENCE (messageType = '4D'O)" }
 
 
 
